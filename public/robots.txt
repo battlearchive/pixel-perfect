@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block admin and login pages from indexing
+Disallow: /admin
+Disallow: /login
+
+Sitemap: https://battlearchive.com/sitemap.xml

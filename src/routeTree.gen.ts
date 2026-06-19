@@ -9,38 +9,221 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VoteRouteImport } from './routes/vote'
+import { Route as TimelineRouteImport } from './routes/timeline'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteImport } from './routes/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BattlesIndexRouteImport } from './routes/battles.index'
+import { Route as Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRouteImport } from './routes/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1.index'
+import { Route as BattlesSlugRouteImport } from './routes/battles.$slug'
+import { Route as Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRouteImport } from './routes/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1.edit.$battleId'
 
+const VoteRoute = VoteRouteImport.update({
+  id: '/vote',
+  path: '/vote',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TimelineRoute = TimelineRouteImport.update({
+  id: '/timeline',
+  path: '/timeline',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1Route =
+  Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteImport.update(
+    {
+      id: '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1',
+      path: '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1',
+      getParentRoute: () => rootRouteImport,
+    } as any,
+  )
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BattlesIndexRoute = BattlesIndexRouteImport.update({
+  id: '/battles/',
+  path: '/battles/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRoute =
+  Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRouteImport.update(
+    {
+      id: '/',
+      path: '/',
+      getParentRoute: () =>
+        Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1Route,
+    } as any,
+  )
+const BattlesSlugRoute = BattlesSlugRouteImport.update({
+  id: '/battles/$slug',
+  path: '/battles/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRoute =
+  Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRouteImport.update(
+    {
+      id: '/edit/$battleId',
+      path: '/edit/$battleId',
+      getParentRoute: () =>
+        Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1Route,
+    } as any,
+  )
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1': typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteWithChildren
+  '/login': typeof LoginRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/timeline': typeof TimelineRoute
+  '/vote': typeof VoteRoute
+  '/battles/$slug': typeof BattlesSlugRoute
+  '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/': typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRoute
+  '/battles/': typeof BattlesIndexRoute
+  '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/edit/$battleId': typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/login': typeof LoginRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/timeline': typeof TimelineRoute
+  '/vote': typeof VoteRoute
+  '/battles/$slug': typeof BattlesSlugRoute
+  '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1': typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRoute
+  '/battles': typeof BattlesIndexRoute
+  '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/edit/$battleId': typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1': typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteWithChildren
+  '/login': typeof LoginRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/timeline': typeof TimelineRoute
+  '/vote': typeof VoteRoute
+  '/battles/$slug': typeof BattlesSlugRoute
+  '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/': typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRoute
+  '/battles/': typeof BattlesIndexRoute
+  '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/edit/$battleId': typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1'
+    | '/login'
+    | '/sitemap.xml'
+    | '/timeline'
+    | '/vote'
+    | '/battles/$slug'
+    | '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/'
+    | '/battles/'
+    | '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/edit/$battleId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/login'
+    | '/sitemap.xml'
+    | '/timeline'
+    | '/vote'
+    | '/battles/$slug'
+    | '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1'
+    | '/battles'
+    | '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/edit/$battleId'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1'
+    | '/login'
+    | '/sitemap.xml'
+    | '/timeline'
+    | '/vote'
+    | '/battles/$slug'
+    | '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/'
+    | '/battles/'
+    | '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/edit/$battleId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1Route: typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteWithChildren
+  LoginRoute: typeof LoginRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  TimelineRoute: typeof TimelineRoute
+  VoteRoute: typeof VoteRoute
+  BattlesSlugRoute: typeof BattlesSlugRoute
+  BattlesIndexRoute: typeof BattlesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/vote': {
+      id: '/vote'
+      path: '/vote'
+      fullPath: '/vote'
+      preLoaderRoute: typeof VoteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/timeline': {
+      id: '/timeline'
+      path: '/timeline'
+      fullPath: '/timeline'
+      preLoaderRoute: typeof TimelineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1': {
+      id: '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1'
+      path: '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1'
+      fullPath: '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1'
+      preLoaderRoute: typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,22 +231,67 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/battles/': {
+      id: '/battles/'
+      path: '/battles'
+      fullPath: '/battles/'
+      preLoaderRoute: typeof BattlesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/': {
+      id: '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/'
+      path: '/'
+      fullPath: '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/'
+      preLoaderRoute: typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRouteImport
+      parentRoute: typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1Route
+    }
+    '/battles/$slug': {
+      id: '/battles/$slug'
+      path: '/battles/$slug'
+      fullPath: '/battles/$slug'
+      preLoaderRoute: typeof BattlesSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/edit/$battleId': {
+      id: '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/edit/$battleId'
+      path: '/edit/$battleId'
+      fullPath: '/adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1/edit/$battleId'
+      preLoaderRoute: typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRouteImport
+      parentRoute: typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1Route
+    }
   }
 }
 
+interface Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteChildren {
+  Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRoute: typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRoute
+  Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRoute: typeof Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRoute
+}
+
+const Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteChildren: Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteChildren =
+  {
+    Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRoute:
+      Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1IndexRoute,
+    Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRoute:
+      Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1EditBattleIdRoute,
+  }
+
+const Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteWithChildren =
+  Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1Route._addFileChildren(
+    Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteChildren,
+  )
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1Route:
+    Adminsmfqefks26537xK9pLm2WqRtY8vN3hJ7bF4cD1zA5sE6gU0iO9pX2nM4kQ8wV3jB7yT5rH1RouteWithChildren,
+  LoginRoute: LoginRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
+  TimelineRoute: TimelineRoute,
+  VoteRoute: VoteRoute,
+  BattlesSlugRoute: BattlesSlugRoute,
+  BattlesIndexRoute: BattlesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
