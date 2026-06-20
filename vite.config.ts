@@ -12,4 +12,9 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Set the base path so built assets resolve correctly when served from
+  // https://battlearchive.github.io/pixel-perfect/ (GitHub Pages).
+  vite: {
+    base: "/pixel-perfect/",
+  },
 });
