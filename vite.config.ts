@@ -11,4 +11,7 @@ export default defineConfig({
   vite: {
     base: "/pixel-perfect/",
   },
+  // Use the Netlify preset when deploying outside the Lovable sandbox.
+  // In sandbox mode this is overridden to cloudflare-module automatically.
+  nitro: { preset: "netlify" },
 });
